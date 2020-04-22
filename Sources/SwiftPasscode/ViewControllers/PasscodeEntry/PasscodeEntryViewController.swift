@@ -45,7 +45,7 @@ public class PasscodeEntryViewController: PasscodeViewController {
                 }
             } else {
                 incorrectAttempt()
-                incorrectPasscodeAnimation()
+                incorrectPasscodeAnimation(enableButtons: false)
             }
         }
     }

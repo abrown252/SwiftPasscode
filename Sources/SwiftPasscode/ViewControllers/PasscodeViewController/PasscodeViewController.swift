@@ -182,7 +182,7 @@ public class PasscodeViewController: UIViewController {
         updateDeleteButtonTitle()
     }
         
-    func incorrectPasscodeAnimation() {
+    func incorrectPasscodeAnimation(enableButtons: Bool = true) {
         setButtonsEnabled(false)
         UIView.animateKeyframes(withDuration: 0.75, delay: 0, options: .calculationModeCubicPaced, animations: {
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.15) {
@@ -216,7 +216,7 @@ public class PasscodeViewController: UIViewController {
             
         }) { complete in
             self.clearValues()
-            self.setButtonsEnabled(true)
+            self.setButtonsEnabled(enableButtons)
         }
     }
     
