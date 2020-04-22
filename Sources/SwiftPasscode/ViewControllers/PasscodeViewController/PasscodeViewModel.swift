@@ -13,6 +13,7 @@ internal struct PasscodeViewModel {
     let configuration: PasscodeConfiguration
     private(set) var passcodeValues: [Int] = []
     var passcodeButtons: [PasscodeButton] = []
+    var canEnterValues = true
     
     // condense passcode values into a single number
     var passcodeNumber: Int {
@@ -60,12 +61,13 @@ internal struct PasscodeViewModel {
         }
         return "Delete"
     }
-        
+
     init(configuration: PasscodeConfiguration) {
         self.configuration = configuration
     }
     
     func setButtonsEnabled(_ enabled: Bool) {
+        canEnterValues = enabled
         passcodeButtons.forEach({ $0.isEnabled = enabled })
     }
         

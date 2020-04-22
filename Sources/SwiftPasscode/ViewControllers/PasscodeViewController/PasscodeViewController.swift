@@ -174,6 +174,9 @@ public class PasscodeViewController: UIViewController {
     }
     
     func valueEntered(value: Int) {
+        guard viewModel.canEnterValues
+            else {return}
+        
         let next = passcodeValues.filter({ !$0.hasValue }).first
         next?.passcodeValue = value
         viewModel.updatePasscode(with: value)
