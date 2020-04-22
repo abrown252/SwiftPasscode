@@ -19,14 +19,14 @@ public struct PasscodeEntryConfiguration: PasscodeConfiguration {
     public var passcodeEntered: (PasscodeViewController, Bool, Int) -> Void
     public var canCancel: Bool
     
-    let numAttemps: Int?
-    let correctPasscode: Int
+    public let numAttemps: Int?
+    public let correctPasscode: Int
 
     public var type: PasscodeEntryType {
         return .entry
     }
     
-    var hasMaxAttempts: Bool {
+    public var hasMaxAttempts: Bool {
         return numAttemps != nil
     }
 }
