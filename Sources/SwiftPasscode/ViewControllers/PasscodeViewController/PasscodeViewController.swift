@@ -26,7 +26,7 @@ public class PasscodeViewController: UIViewController {
     
     init(configuration: PasscodeConfiguration) {
         viewModel = PasscodeViewModel(configuration: configuration)
-        super.init(nibName: "PasscodeViewController", bundle: nil)
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
