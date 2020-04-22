@@ -66,7 +66,7 @@ internal struct PasscodeViewModel {
         self.configuration = configuration
     }
     
-    func setButtonsEnabled(_ enabled: Bool) {
+    mutating func setButtonsEnabled(_ enabled: Bool) {
         canEnterValues = enabled
         passcodeButtons.forEach({ $0.isEnabled = enabled })
     }
