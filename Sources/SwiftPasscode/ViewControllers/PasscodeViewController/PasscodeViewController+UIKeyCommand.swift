@@ -17,6 +17,8 @@ extension PasscodeViewController {
     public override var keyCommands: [UIKeyCommand]? {
         var commands = [UIKeyCommand]()
         
+        commands.append(UIKeyCommand(input: "\u{8}", modifierFlags: [], action: #selector(deleteButtonPressed)))
+        
         for i in 0...9 {
             commands.append(UIKeyCommand(input: "\(i)", modifierFlags: [], action: #selector(valueSelected(command:))))
         }
@@ -31,5 +33,9 @@ extension PasscodeViewController {
             else {return}
         
         valueEntered(value: value)
+    }
+    
+    @objc func deleteButtonPressed() {
+        deleteLast()
     }
 }
