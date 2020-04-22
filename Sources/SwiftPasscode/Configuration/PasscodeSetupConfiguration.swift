@@ -14,10 +14,10 @@ public struct PasscodeSetupConfiguration: PasscodeConfiguration {
         self.passcodeEntered = passcodeEntered
     }
 
-    var passcodeEntered: (PasscodeViewController, Bool, Int) -> Void
-    var canCancel: Bool
+    public var passcodeEntered: (PasscodeViewController, Bool, Int) -> Void
+    public var canCancel: Bool
     
-    var type: PasscodeEntryType {
+    public var type: PasscodeEntryType {
         return .setup
     }
 }

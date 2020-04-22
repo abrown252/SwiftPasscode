@@ -6,7 +6,9 @@
 //  Copyright © 2020 AJB. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
+#endif
 
 internal class PasscodeButton: UIButton {
 

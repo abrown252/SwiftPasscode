@@ -12,6 +12,7 @@ public enum PasscodeEntryType {
     case setup
     case entry
 }
+
 public protocol PasscodeConfiguration {
     var type: PasscodeEntryType {get}
     var passcodeEntered: (PasscodeViewController, Bool, Int) -> Void {get set}

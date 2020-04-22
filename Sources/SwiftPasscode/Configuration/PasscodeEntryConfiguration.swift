@@ -16,12 +16,13 @@ public struct PasscodeEntryConfiguration: PasscodeConfiguration {
         self.correctPasscode = correctPasscode
     }
     
-    var passcodeEntered: (PasscodeViewController, Bool, Int) -> Void
-    var canCancel: Bool
+    public var passcodeEntered: (PasscodeViewController, Bool, Int) -> Void
+    public var canCancel: Bool
+    
     let numAttemps: Int?
     let correctPasscode: Int
 
-    var type: PasscodeEntryType {
+    public var type: PasscodeEntryType {
         return .entry
     }
     

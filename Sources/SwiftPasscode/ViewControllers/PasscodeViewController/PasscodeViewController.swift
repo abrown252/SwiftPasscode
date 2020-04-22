@@ -6,9 +6,11 @@
 //  Copyright © 2020 AJB. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
+#endif
 
-internal class PasscodeViewController: UIViewController {
+public class PasscodeViewController: UIViewController {
 
     private(set) var passcodeValues = [PasscodeValueView]()
     private(set) var passcodeStackView: UIStackView?
@@ -31,7 +33,7 @@ internal class PasscodeViewController: UIViewController {
         fatalError("init?(coder: NSCoder) not supported")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
         addBlurBackground()

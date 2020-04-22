@@ -6,7 +6,9 @@
 //  Copyright © 2020 AJB. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
+#endif
 
 public class PasscodeEntryViewController: PasscodeViewController {
     
@@ -22,7 +24,7 @@ public class PasscodeEntryViewController: PasscodeViewController {
         fatalError("init?(coder: NSCoder) not supported")
     }
         
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         if let title = titleString {
