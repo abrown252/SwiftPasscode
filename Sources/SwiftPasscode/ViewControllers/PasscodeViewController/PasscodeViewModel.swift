@@ -80,6 +80,7 @@ internal struct PasscodeViewModel {
     }
     
     mutating func deleteLast() {
+        if passcodeValues.isEmpty {return}
         passcodeValues.removeLast()
     }
 }
