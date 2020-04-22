@@ -45,7 +45,6 @@ public class PasscodeEntryViewController: PasscodeViewController {
                 }
             } else {
                 incorrectAttempt()
-                incorrectPasscodeAnimation(enableButtons: false)
             }
         }
     }
@@ -66,6 +65,7 @@ public class PasscodeEntryViewController: PasscodeViewController {
                 }
             }
         }
+        incorrectPasscodeAnimation(enableButtons: passcodeEntryViewModel.hasAttemptsRemaining)
     }
 
 }
