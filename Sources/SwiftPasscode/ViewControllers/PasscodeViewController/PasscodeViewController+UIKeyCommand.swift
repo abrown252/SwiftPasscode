@@ -18,7 +18,7 @@ extension PasscodeViewController {
         var commands = [UIKeyCommand]()
         
         for i in 0...9 {
-            commands.append(UIKeyCommand(input: "\(i)", modifierFlags: [], action: #selector(valueSelected(command:)))
+            commands.append(UIKeyCommand(input: "\(i)", modifierFlags: [], action: #selector(valueSelected(command:))))
         }
         
         return commands
