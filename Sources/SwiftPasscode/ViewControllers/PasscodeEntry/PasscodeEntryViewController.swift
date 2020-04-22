@@ -40,6 +40,7 @@ public class PasscodeEntryViewController: PasscodeViewController {
     private func checkPasscodeIsCorrect() {
         if passcodeValues.filter({ !$0.hasValue }).isEmpty {
             if passcodeEntryViewModel.passcodeIsCorrect(passcode: viewModel.passcodeNumber) {
+                viewModel.setButtonsEnabled(false)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                     self.viewModel.passcodeEnteredCallback(self, true, self.viewModel.passcodeNumber)
                 }

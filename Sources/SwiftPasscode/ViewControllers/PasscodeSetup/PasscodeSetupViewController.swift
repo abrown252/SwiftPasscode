@@ -45,6 +45,7 @@ public class PasscodeSetupViewController: PasscodeViewController {
     
     private func checkPasscodesMatch() {
         if passcodeSetupViewModel.passcodesAreEqual {
+            viewModel.setButtonsEnabled(false)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 self.viewModel.passcodeEnteredCallback(self, true, self.viewModel.passcodeNumber)
             }
