@@ -25,6 +25,9 @@ public class PasscodeSetupViewController: PasscodeViewController {
     
     override func valueEntered(value: Int) {
         super.valueEntered(value: value)
+        guard viewModel.canEnterValues
+            else {return}
+        
         checkPasscodeEntry()
     }
     
