@@ -16,6 +16,7 @@ extension PasscodeViewController {
     
     public override var keyCommands: [UIKeyCommand]? {
         var commands = [UIKeyCommand]()
+        
         for i in 0...9 {
             commands.append(UIKeyCommand(input: "\(i)", modifierFlags: [], action: #selector(valueSelected(command:)), discoverabilityTitle: "\(i)"))
         }
@@ -29,6 +30,6 @@ extension PasscodeViewController {
             let value = Int(input)
             else {return}
         
-        print(value)
+        valueEntered(value: value)
     }
 }
