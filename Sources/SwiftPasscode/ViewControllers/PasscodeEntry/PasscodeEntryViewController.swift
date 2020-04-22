@@ -12,8 +12,8 @@ import UIKit
 
 public class PasscodeEntryViewController: PasscodeViewController {
     
-    var passcodeEntryViewModel: PasscodeEntryViewModel
-    var titleString: String?
+    private var passcodeEntryViewModel: PasscodeEntryViewModel
+    public var titleString: String?
     
     public init(configuration: PasscodeEntryConfiguration) {
         passcodeEntryViewModel = PasscodeEntryViewModel(configuration: configuration)

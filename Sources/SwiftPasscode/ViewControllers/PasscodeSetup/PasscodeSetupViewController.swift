@@ -12,7 +12,7 @@ import UIKit
 
 public class PasscodeSetupViewController: PasscodeViewController {
 
-    var passcodeSetupViewModel: PasscodeSetupViewModel
+    private var passcodeSetupViewModel: PasscodeSetupViewModel
     
     public init(configuration: PasscodeSetupConfiguration) {
         passcodeSetupViewModel = PasscodeSetupViewModel(configuration: configuration)
