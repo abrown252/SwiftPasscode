@@ -9,7 +9,7 @@
 import Foundation
 
 public struct PasscodeEntryConfiguration: PasscodeConfiguration {
-    init(canCancel: Bool, numAttempts: Int?, correctPasscode: Int, passcodeEntered: @escaping (PasscodeViewController, Bool, Int) -> Void) {
+    public init(canCancel: Bool, numAttempts: Int?, correctPasscode: Int, passcodeEntered: @escaping (PasscodeViewController, Bool, Int) -> Void) {
         self.canCancel = canCancel
         self.numAttemps = numAttempts
         self.passcodeEntered = passcodeEntered
