@@ -9,14 +9,14 @@
 import Foundation
 
 public struct PasscodeEntryConfiguration: PasscodeConfiguration {
-    public init(canCancel: Bool, numAttempts: Int?, correctPasscode: Int, passcodeEntered: @escaping (PasscodeViewController, Bool, Int) -> Void) {
+    public init(canCancel: Bool, numAttempts: Int?, correctPasscode: Int, passcodeEntered: @escaping (PasscodeViewController, Bool, Int?) -> Void) {
         self.canCancel = canCancel
         self.numAttemps = numAttempts
         self.passcodeEntered = passcodeEntered
         self.correctPasscode = correctPasscode
     }
     
-    public var passcodeEntered: (PasscodeViewController, Bool, Int) -> Void
+    public var passcodeEntered: (PasscodeViewController, Bool, Int?) -> Void
     public var canCancel: Bool
     
     public let numAttemps: Int?

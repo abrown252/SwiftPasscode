@@ -153,7 +153,7 @@ public class PasscodeViewController: UIViewController {
         return button
     }
     
-    func updateDeleteButtonTitle() {
+    private func updateDeleteButtonTitle() {
         deleteButton?.setTitle(viewModel.deleteButtonTitle, for: .normal)
         if !viewModel.canCancel {
             deleteButton?.isEnabled = hasValues
@@ -167,7 +167,7 @@ public class PasscodeViewController: UIViewController {
             if hasValues {
                 deleteLast()
             } else {
-                self.dismiss(animated: true, completion: nil)
+                self.viewModel.passcodeEnteredCallback(self, false, nil)
             }
             
         }

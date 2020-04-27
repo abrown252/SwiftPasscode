@@ -15,6 +15,6 @@ public enum PasscodeEntryType {
 
 public protocol PasscodeConfiguration {
     var type: PasscodeEntryType {get}
-    var passcodeEntered: (PasscodeViewController, Bool, Int) -> Void {get set}
+    var passcodeEntered: (PasscodeViewController, Bool, Int?) -> Void {get set}
     var canCancel: Bool {get set}
 }

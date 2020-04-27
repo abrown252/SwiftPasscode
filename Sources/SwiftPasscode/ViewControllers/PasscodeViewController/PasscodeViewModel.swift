@@ -47,7 +47,7 @@ internal struct PasscodeViewModel {
         return configuration.type
     }
     
-    var passcodeEnteredCallback: (PasscodeViewController, Bool, Int) -> Void {
+    var passcodeEnteredCallback: (PasscodeViewController, Bool, Int?) -> Void {
         return configuration.passcodeEntered
     }
         

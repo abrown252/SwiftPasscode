@@ -9,12 +9,12 @@
 import Foundation
 
 public struct PasscodeSetupConfiguration: PasscodeConfiguration {
-    public init(canCancel: Bool, passcodeEntered: @escaping (PasscodeViewController, Bool, Int) -> Void) {
+    public init(canCancel: Bool, passcodeEntered: @escaping (PasscodeViewController, Bool, Int?) -> Void) {
         self.canCancel = canCancel
         self.passcodeEntered = passcodeEntered
     }
 
-    public var passcodeEntered: (PasscodeViewController, Bool, Int) -> Void
+    public var passcodeEntered: (PasscodeViewController, Bool, Int?) -> Void
     public var canCancel: Bool
     
     public var type: PasscodeEntryType {
